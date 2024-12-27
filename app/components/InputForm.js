@@ -1,10 +1,23 @@
 import React from 'react'
 //import firebase
-import { collection, addDoc,getDoc } from "firebase/firestore"; 
+import { db } from '../firebase/firebase'
+import {
+    collection,
+    addDoc, 
+    getDoc, 
+    docs, 
+    deleteDoc,
+    updateDoc
+} from 'firebase/firestore'
+
+
+//const docRef = doc(db,"message","LQdPRcqWFaRdTMcqtCC3")
+//const collectionRef = collection(db,"message")
+//const docSnap = await getDoc(docRef)
+//console.log(docSnap.data())
 
 const InputForm = () => {
-  const collectionRef = collection(db,"message")
-  const docsSnap =  getDoc(collectionRef);
+
 
   return (
     <div>
